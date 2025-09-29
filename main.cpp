@@ -13,7 +13,7 @@ int main() {
     cout << "=== Data Structures Implementation ===" << endl << endl;
 
     // Example usage of Stack (LIFO)
-    cout << "1. STACK (LIFO - Last In, First Out):" << endl;
+    cout << "1. STACK (LIFO):" << endl;
     Stack stack;
 
     stack.push(10);
@@ -30,7 +30,7 @@ int main() {
     cout << endl;
 
     // Example usage of Queue (FIFO)
-    cout << "2. QUEUE (FIFO - First In, First Out):" << endl;
+        cout << "2. QUEUE (FIFO):" << endl;
     Queue queue;
     queue.enqueue(10);
     queue.enqueue(20);
@@ -45,7 +45,7 @@ int main() {
     cout << endl;
 
     // Example usage of HashTable
-    cout << "3. HASH TABLE (Unordered key-value storage):" << endl;
+    cout << "3. HASH TABLE (Order):" << endl;
     HashTable hashTable;
     
     hashTable.insert(1, "One");

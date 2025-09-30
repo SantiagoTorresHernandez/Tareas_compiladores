@@ -27,10 +27,12 @@ int main() {
     cout << "Popped element is: " << stack.pop() << endl; // 30
     cout << "Stack size after pop is: " << stack.size() << endl; // 2
     stack.display();
+    cout << "------------------------------" << endl;
     cout << endl;
 
     // Example usage of Queue (FIFO)
-        cout << "2. QUEUE (FIFO):" << endl;
+
+    cout << "2. QUEUE (FIFO):" << endl;
     Queue queue;
     queue.enqueue(10);
     queue.enqueue(20);
@@ -42,6 +44,7 @@ int main() {
     cout << "Dequeued element is: " << queue.dequeue() << endl; // 10
     cout << "Queue size after dequeue is: " << queue.size() << endl; // 2
     queue.display();
+    cout << "------------------------------" << endl;
     cout << endl;
 
     // Example usage of HashTable
@@ -54,13 +57,13 @@ int main() {
     hashTable.insert(-5, "Negative Five"); 
     hashTable.insert(22, "Twenty Two"); // collision test 2
     
-    cout << "Hash table size: " << hashTable.size() << endl;
-    cout << "Is empty? " << (hashTable.isEmpty() ? "Yes" : "No") << endl;
+    cout << "Hash table size: " << hashTable.size() << endl; // 5
+    cout << "Is empty? " << (hashTable.isEmpty() ? "Yes" : "No") << endl; // No
     
     cout << "Search key 2: " << hashTable.search(2) << endl; // Two
     cout << "Search key 12: " << hashTable.search(12) << endl; // Twelve
     cout << "Search key -5: " << hashTable.search(-5) << endl; // Negative Five
-    cout << "Contains key 22? " << (hashTable.contains(22) ? "Yes" : "No") << endl;
+    cout << "Contains key 22? " << (hashTable.contains(22) ? "Yes" : "No") << endl; // Yes
     
     hashTable.display();
     
@@ -69,7 +72,7 @@ int main() {
     cout << "Key 2 removed: " << (removed ? "Yes" : "No") << endl;
     cout << "Search key 2 after removal: " << hashTable.search(2) << endl; // key not found
     cout << "Hash table size after removal: " << hashTable.size() << endl;
-    
+    cout << "------------------------------" << endl;
     hashTable.display();
 
     return 0;

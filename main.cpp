@@ -21,11 +21,11 @@ int main() {
     stack.push(30);
     stack.display();
 
-    cout << "Top element is: " << stack.peek() << endl; // Should print 30
-    cout << "Stack size is: " << stack.size() << endl;   // Should print 3
+    cout << "Top element is: " << stack.peek() << endl; // 30
+    cout << "Stack size is: " << stack.size() << endl;   // 3
 
-    cout << "Popped element is: " << stack.pop() << endl; // Should print 30
-    cout << "Stack size after pop is: " << stack.size() << endl; // Should print 2
+    cout << "Popped element is: " << stack.pop() << endl; // 30
+    cout << "Stack size after pop is: " << stack.size() << endl; // 2
     stack.display();
     cout << endl;
 
@@ -37,10 +37,10 @@ int main() {
     queue.enqueue(30);
     queue.display();
     
-    cout << "Front element is: " << queue.peek() << endl; // Should print 10
-    cout << "Queue size is: " << queue.size() << endl;   // Should print 3
-    cout << "Dequeued element is: " << queue.dequeue() << endl; // Should print 10
-    cout << "Queue size after dequeue is: " << queue.size() << endl; // Should print 2
+    cout << "Front element is: " << queue.peek() << endl; // 10
+    cout << "Queue size is: " << queue.size() << endl;   // 3
+    cout << "Dequeued element is: " << queue.dequeue() << endl; // 10
+    cout << "Queue size after dequeue is: " << queue.size() << endl; // 2
     queue.display();
     cout << endl;
 
@@ -50,16 +50,16 @@ int main() {
     
     hashTable.insert(1, "One");
     hashTable.insert(2, "Two");
-    hashTable.insert(12, "Twelve"); // Collision with key 2 if hashSize is 10
-    hashTable.insert(-5, "Negative Five"); // Test negative key
-    hashTable.insert(22, "Twenty Two"); // Another collision test
+    hashTable.insert(12, "Twelve"); // collision with key 2 if hashSize is 10
+    hashTable.insert(-5, "Negative Five"); 
+    hashTable.insert(22, "Twenty Two"); // collision test 2
     
     cout << "Hash table size: " << hashTable.size() << endl;
     cout << "Is empty? " << (hashTable.isEmpty() ? "Yes" : "No") << endl;
     
-    cout << "Search key 2: " << hashTable.search(2) << endl; // Should print "Two"
-    cout << "Search key 12: " << hashTable.search(12) << endl; // Should print "Twelve"
-    cout << "Search key -5: " << hashTable.search(-5) << endl; // Should print "Negative Five"
+    cout << "Search key 2: " << hashTable.search(2) << endl; // Two
+    cout << "Search key 12: " << hashTable.search(12) << endl; // Twelve
+    cout << "Search key -5: " << hashTable.search(-5) << endl; // Negative Five
     cout << "Contains key 22? " << (hashTable.contains(22) ? "Yes" : "No") << endl;
     
     hashTable.display();
@@ -67,7 +67,7 @@ int main() {
     cout << "\nRemoving key 2..." << endl;
     bool removed = hashTable.remove(2);
     cout << "Key 2 removed: " << (removed ? "Yes" : "No") << endl;
-    cout << "Search key 2 after removal: " << hashTable.search(2) << endl; // Should indicate key not found
+    cout << "Search key 2 after removal: " << hashTable.search(2) << endl; // key not found
     cout << "Hash table size after removal: " << hashTable.size() << endl;
     
     hashTable.display();

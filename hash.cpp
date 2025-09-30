@@ -1,4 +1,4 @@
-// implementation of a hash table (unordered key-value storage) in C++
+// implementation of a hash table (order) in C++
 #include <iostream>
 #include <vector>
 #include <list>
@@ -7,13 +7,13 @@ using namespace std;
 
 class HashTable {
     private:
-        static const int hashSize = 10; // Size of the hash table
-        vector<list<pair<int, string>>> table; // Vector of lists to handle collisions
-        int count; // Track number of elements
+        static const int hashSize = 10; // size of the hash table
+        vector<list<pair<int, string>>> table; // vector of lists to handle collisions
+        int count; // number of elements
 
-        // Hash function to compute index for a key
+        // compute index for a key using hash function
         int hashFunction(int key) {
-            return abs(key) % hashSize; // Use abs to handle negative keys
+            return abs(key) % hashSize; 
         }
 
     public:
@@ -26,15 +26,15 @@ class HashTable {
             for (auto& pair : table[index]) {
                 if (pair.first == key) {
                     pair.second = value;
-                    return; // Key updated, no need to increment count
+                    return; // key updated, no need to increment count
                 }
             }
-            // If key does not exist, add new key-value pair
+            // if key does not exist, add new key-value pair
             table[index].emplace_back(key, value);
             count++;
         }
 
-        // Remove key-value pair from the hash table
+        // remove key-value pair from the hash table
         bool remove(int key) {
             int index = hashFunction(key);
             auto& cell = table[index];
@@ -46,7 +46,7 @@ class HashTable {
                 }
             }
             cout << "Key not found" << endl;
-            return false; // Key not found
+            return false; 
         }
 
         // Search for a value by key in the hash table
@@ -57,7 +57,7 @@ class HashTable {
                     return pair.second;
                 }
             }
-            return "Key not found"; // Indicate that the key does not exist
+            return "Key not found"; 
         }
 
         // Check if a key exists in the hash table

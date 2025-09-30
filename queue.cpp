@@ -1,4 +1,4 @@
-// implementation of queue (FIFO - First In, First Out) in c++
+// implementation of queue (FIFO) in c++
 #include <iostream>
 #include <vector>
 using namespace std;
@@ -9,19 +9,19 @@ class Queue {
         vector<int> elements;
 
     public:
-        Queue() : front(0), rear(-1) {}
+        Queue() : front(0), rear(-1) {} // initialize front and rear pointers
 
-        // Enqueue element to the queue
+        // Add element to the queue
         void enqueue(int element) {
             elements.push_back(element);
             rear++;
         }
 
-        // Dequeue element from the queue
+        // Remove element from the queue
         int dequeue() {
             if (isEmpty()) {
                 cout << "Queue Underflow" << endl;
-                return -1; // Indicate queue is empty
+                return -1; //queue is empty
             }
             int dequeuedElement = elements[front];
             
@@ -41,7 +41,7 @@ class Queue {
         int peek() {
             if (isEmpty()) {
                 cout << "Queue is empty" << endl;
-                return -1; // Indicate queue is empty
+                return -1; 
             }
             return elements[front];
         }
@@ -56,7 +56,7 @@ class Queue {
             return elements.size();
         }
 
-        // Display all elements in the queue (for debugging)
+        // Display all elements in the queue
         void display() {
             if (isEmpty()) {
                 cout << "Queue is empty" << endl;

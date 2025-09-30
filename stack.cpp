@@ -11,16 +11,16 @@ class Stack {
     public:
         Stack() {}
 
-        // Push element onto stack
+        // Add element onto stack LIFO
         void push(int element) {
             elements.push_back(element);
         }
 
-        // Pop element from stack
+        // Remove element from stack LIFO
         int pop() {
             if (isEmpty()) {
                 cout << "Stack Underflow" << endl;
-                return -1; // Indicate stack is empty
+                return -1; //stack is empty
             }
             int poppedElement = elements.back();
             elements.pop_back();
@@ -31,7 +31,7 @@ class Stack {
         int peek() {
             if (isEmpty()) {
                 cout << "Stack is empty" << endl;
-                return -1; // Indicate stack is empty
+                return -1; 
             }
             return elements.back();
         }
